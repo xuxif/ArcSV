@@ -37,6 +37,14 @@ ArcSV is a unique bioinformatics tool specifically tailored for identifying stru
   git clone git@github.com:xuxif/ArcSV.git
   ```
 ### Generate feature in archaic human sequencing data
-
+ ```
+  cd arcIn
+  bash generateBKSinArc.sh /path/to/your/archaic.bam
+  ```
 
 ### Detect shared SV in archaic human
+ ```
+  cd arcIn/generateBKSinBam
+  bash order.sh /path/to/your/modern_human.bam
+  ```
+
