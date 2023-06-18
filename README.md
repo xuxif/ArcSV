@@ -17,7 +17,7 @@ ArcSV is a unique bioinformatics tool specifically tailored for identifying stru
 7. Anaconda <br />
 8. xarg v4.5 (v4.8 will prompt parameter conflict）
 ### Recommended Environment Configuration Steps
-1. Insatll Anaconda in your server (Not Miniconda which met errors).
+1. Insatll Anaconda in your server.
 2. Create a new conda environment 
  
  ```
@@ -27,6 +27,11 @@ ArcSV is a unique bioinformatics tool specifically tailored for identifying stru
  <br />
  
 3. Conda install samtools, bedtools
+ 
+ ```
+  conda install samtools bedtools  bwa -y
+  ```
+4. Clone ArcSV
  
  ```
   conda install samtools bedtools  bwa -y
