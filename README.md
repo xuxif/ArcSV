@@ -34,5 +34,9 @@ ArcSV is a unique bioinformatics tool specifically tailored for identifying stru
 4. Clone ArcSV
  
  ```
-  conda install samtools bedtools  bwa -y
+  git clone git@github.com:xuxif/ArcSV.git
   ```
+### Generate feature in archaic human sequencing data
+
+
+### Detect shared SV in archaic human
