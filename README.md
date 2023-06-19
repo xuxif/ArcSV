@@ -1,7 +1,7 @@
 # ArcSV
 A pipeline to detect SV in archaic human
 <br/>
-![This is an image](https://github.com/xuxif/ArcSV/blob/main/archaic_fig1.png)
+![This is an image](https://github.com/xuxif/ArcSV/blob/main/archaic_fig1.png )
 <br/>
 ##
 ## Workflow of ArcSV <br />
