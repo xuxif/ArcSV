@@ -7,7 +7,7 @@ A pipeline to detect SV in archaic human
 ## Workflow of ArcSV <br />
 ArcSV is a unique bioinformatics tool specifically tailored for identifying structural variations (SVs) in archaic human genomes. Leveraging its specialized features, ArcSV efficiently manages the challenges posed by ancient genomic data, including shorter fragment sizes and reduced discordant reads. Hence, it emerges as the only tool for SV detection in archaic hominins.
 
-## Software version requirements (without docker): <br />
+## Software version requirements : <br />
 1. samtools 1.15.1 (Other versions need to test whether the "samtools coverage" function is included)<br />
 2. bedtools v2.30.0<br />
 3. pysam 0.17.0<br />
