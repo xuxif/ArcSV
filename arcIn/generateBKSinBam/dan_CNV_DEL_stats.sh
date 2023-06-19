@@ -1,0 +1,1 @@
+wc -l BKsArcInBAM/CNV*dan*|grep -v " 0 "|perl -npe "s/.*\///;s/_dan.*//"|grep -v "total"|while read file ;do bedtools intersect -a dan_CNV_DEL/sample_bed/${file}.bed -b <(cat BKsArcInBAM/${file}_dan*.tsv|bed2pos |pos2bed 100 ) -wa -u  ;done |sort |uniq |wc -l

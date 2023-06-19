@@ -1,0 +1,14 @@
+sample=$1
+record=$2
+dir=$3
+bk=`echo $2|perl -npe "s/.*://;s/\-/\t/"|perl -F'\t' -alne '$pos=($F[0]+$F[1])/2;print "$pos";'`
+if [[ $dir == "right" ]]
+then
+	bedtools intersect  \
+		-b <(../../DeepAlu/DeepAlu_script/SE-MEI/extractSoftclipped -l 7 <( samtools view -h /NAS/DeepMEI/DeepMEI_output/${sample}.final.cram/deepalu_${sample}.final.cram.bam $record 2>/dev/null|perl -F'\t' -alne 'if($_=~/^@/) {print "$_";} else{$F[1]=0;print join("\t",@F);}') 2>/dev/null |grep -A1 "soft"|grep  -v "^\-" |perl -npe "s/(.*?\|){6}(.*?)\|\*\|(.*?)\|.*\n/\2\t\3\t/"|perl -F'\t' -alne 'if($F[0]=~/S$/) { print "$F[1]\t$F[2]\tright";} else {print "$F[1]\t$F[2]\tleft";};' |grep "^$bk"$'\t'|cut -f2,3|perl -npe "s/^/$record\t/"|perl -npe "s/[:\-]/\t/g"|perl -npe "s/$/\t1k/"|grep "$dir" ) \
+		-a <(../../DeepAlu/DeepAlu_script/SE-MEI/extractSoftclipped -l 2 <(samtools view -h ../../dan/dan_hg38.bam $record|perl -F'\t' -alne 'if($_=~/^@/) {print "$_";} else{$F[1]=0;print join("\t",@F);}' ) 2>/dev/null |grep -A1 "soft"|grep -v "^\-"|perl -npe "s/(.*?\|){6}(.*?)\|\*\|(.*?)\|.*\n/\2\t\3\t/"|perl -F'\t' -alne 'if($F[0]=~/S$/) { print "$F[1]\t$F[2]\tright";} else {print "$F[1]\t$F[2]\tleft";};' |grep "^$bk"$'\t'|cut -f2,3|perl -npe "s/^/$record\t/"|perl -npe "s/[:\-]/\t/g"|perl -F'\t' -alne '$i++;print "$_\t$i\tdan";' |grep "$dir") -wa -wb  |cut -f1-4,6,11 |perl -F'\t' -alne 'if($F[5]=~/^$F[3]/) { $pos=($F[1]+$F[2])/2;print "$F[0]\t$pos\t$F[4]";}'|uniq |cut -f1,2|uniq -c |perl -npe "s/^ +(\d+) +(.*)/\2\t\1\t$dir/"
+else
+	bedtools intersect  \
+		-b <(../../DeepAlu/DeepAlu_script/SE-MEI/extractSoftclipped -l 7 <( samtools view -h /NAS/DeepMEI/DeepMEI_output/${sample}.final.cram/deepalu_${sample}.final.cram.bam $record 2>/dev/null|perl -F'\t' -alne 'if($_=~/^@/) {print "$_";} else{$F[1]=0;print join("\t",@F);}') 2>/dev/null |grep -A1 "soft"|grep  -v "^\-" |perl -npe "s/(.*?\|){6}(.*?)\|\*\|(.*?)\|.*\n/\2\t\3\t/"|perl -F'\t' -alne 'if($F[0]=~/S$/) { print "$F[1]\t$F[2]\tright";} else {print "$F[1]\t$F[2]\tleft";};' |grep "^$bk"$'\t'|cut -f2,3|perl -npe "s/^/$record\t/"|perl -npe "s/[:\-]/\t/g"|perl -npe "s/$/\t1k/"|grep "$dir" ) \
+		-a <(../../DeepAlu/DeepAlu_script/SE-MEI/extractSoftclipped -l 2 <(samtools view -h ../../dan/dan_hg38.bam $record|perl -F'\t' -alne 'if($_=~/^@/) {print "$_";} else{$F[1]=0;print join("\t",@F);}' ) 2>/dev/null |grep -A1 "soft"|grep -v "^\-"|perl -npe "s/(.*?\|){6}(.*?)\|\*\|(.*?)\|.*\n/\2\t\3\t/"|perl -F'\t' -alne 'if($F[0]=~/S$/) { print "$F[1]\t$F[2]\tright";} else {print "$F[1]\t$F[2]\tleft";};' |grep "^$bk"$'\t'|cut -f2,3|perl -npe "s/^/$record\t/"|perl -npe "s/[:\-]/\t/g"|perl -F'\t' -alne '$i++;print "$_\t$i\tdan";' |grep "$dir") -wa -wb  |cut -f1-4,6,11 |perl -F'\t' -alne 'if($F[5]=~/$F[3]$/) { $pos=($F[1]+$F[2])/2;print "$F[0]\t$pos\t$F[4]";}'|uniq |cut -f1,2|uniq -c |perl -npe "s/^ +(\d+) +(.*)/\2\t\1\t$dir/"
+fi
