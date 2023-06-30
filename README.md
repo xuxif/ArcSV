@@ -67,3 +67,16 @@ chr1    1667010 1/1     HG01529
 You can find the detected structural variations (SVs) in the BKSinBAM_oneBP file. The files bamfile_dan.tsv, bamfile_Altai.tsv, and bamfile_Vindija.tsv contain the corresponding SVs shared between the bamfile and three archaic humans, respectively.
 
 The format of the output file is detailed below:
+```
+#chromosome position position evidence_direction count1 count2
+chr1    948661  948663  left    1       16
+chr1    1068834 1068836 right   1       5
+chr1    1565630 1565632 left    1       11
+chr1    1595103 1595105 right   1       4
+chr1    2147719 2147721 left    1       1
+chr1    3176298 3176300 right   1       12
+chr1    3181552 3181554 left    1       1
+chr1    3502017 3502019 left    4       12
+chr1    3502089 3502091 right   2       12
+```
+In the output files, the term evidence_direction refers to the side of the reads in both archaic and modern humans that are soft-clipped. The term count1 represents the count of reads in the archaic human that support the identified SV, while count2 refers to the count of reads in the modern human that support the same SV.
