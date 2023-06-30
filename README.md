@@ -10,12 +10,10 @@ ArcSV is a unique bioinformatics tool specifically tailored for identifying stru
 ## Software version requirements : <br />
 1. samtools 1.15.1 (Other versions need to test whether the "samtools coverage" function is included)<br />
 2. bedtools v2.30.0<br />
-3. pysam 0.17.0<br />
-4. python 3.8 or 3.9 <br />
-5. perl v5.32.1<br />
-6. bc <br />
-7. Anaconda <br />
-8. xarg v4.5 (v4.8 will prompt parameter conflict）
+3. python 3.8 or 3.9 <br />
+4. perl v5.32.1<br />
+5. bc <br />
+6. xarg v4.5 (v4.8 will prompt parameter conflict）
 ### Recommended Environment Configuration Steps
 1. Insatll Anaconda in your server.
 2. Create a new conda environment 
