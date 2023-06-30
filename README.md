@@ -39,12 +39,24 @@ ArcSV is a unique bioinformatics tool specifically tailored for identifying stru
 ### Generate feature in archaic human sequencing data
  ```
   cd arcIn
-  bash generateBKSinArc.sh /path/to/your/archaic.bam
+  bash generateBKSinArc.sh -i /path/to/your/archaic.bam 
   ```
 
 ### Detect shared SV in archaic human
  ```
   cd arcIn/generateBKSinBam
-  bash order.sh /path/to/your/modern_human.bam
+  bash order.sh /path/to/your/modern_human.bam -r /path/to/your/reference.fa -b /path/to/your/breakpoint.tsv
   ```
-
+The version of reference genome is GRCh38 (HG38). The format of breakpoint.tsv is below, the first two coloumns is required:
+```
+chr1    948661  1/1     HG01529
+chr1    998785  0/1     HG01529
+chr1    1068732 0/1     HG01529
+chr1    1124043 0/1     HG01529
+chr1    1240648 0/1     HG01529
+chr1    1477837 1/1     HG01529
+chr1    1565630 0/1     HG01529
+chr1    1595081 0/1     HG01529
+chr1    1595093 0/1     HG01529
+chr1    1667010 1/1     HG01529
+```
