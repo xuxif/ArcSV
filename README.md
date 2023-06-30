@@ -35,7 +35,12 @@ ArcSV is a unique bioinformatics tool specifically tailored for identifying stru
   git clone git@github.com:xuxif/ArcSV.git
   ```
 ### Generate feature in archaic human sequencing data
- ```
+In this repository, we've included a partial feature set for three archaic humans. Due to GitHub's file size limitations, we're unable to host the complete feature set. However, rest assured that the features we have provided include all loci identified in our related paper.
+
+If you're working with sequencing data from populations not covered in our paper, we highly recommend obtaining the complete feature set. Feel free to reach out to us via email at 2623716586@qq.com, and we'll be happy to provide the full feature file.
+
+Moreover, if you're interested in studying other archaic humans (or non-human species), you can generate a new feature file using the code provided in this repository.
+```
   cd arcIn
   bash generateBKSinArc.sh -i /path/to/your/archaic.bam 
   ```
