@@ -63,3 +63,7 @@ chr1    1595081 0/1     HG01529
 chr1    1595093 0/1     HG01529
 chr1    1667010 1/1     HG01529
 ```
+#### Output (shared SV)
+You can find the detected structural variations (SVs) in the BKSinBAM_oneBP file. The files bamfile_dan.tsv, bamfile_Altai.tsv, and bamfile_Vindija.tsv contain the corresponding SVs shared between the bamfile and three archaic humans, respectively.
+
+The format of the output file is detailed below:
