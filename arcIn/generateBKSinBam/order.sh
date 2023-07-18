@@ -23,7 +23,7 @@ then
 	echo "-r $bam_file is not existed!"
 	exit
 fi
-if [[ ! -f $input_bed]] && [[ ! -f "$PWD/$input_bed" ]]
+if [[ ! -f $input_bed ]] && [[ ! -f "$PWD/$input_bed" ]]
 then
 	echo "-r $input_bed is not existed!"
 	exit
