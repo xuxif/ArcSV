@@ -48,7 +48,7 @@ Moreover, if you're interested in studying other archaic humans (or non-human sp
 ### Detect shared SV in archaic human
  ```
   cd arcIn/generateBKSinBam
-  bash order.sh /path/to/your/modern_human.bam -r /path/to/your/reference.fa -b /path/to/your/breakpoint.tsv
+  bash order.sh -i /path/to/your/modern_human.bam -r /path/to/your/reference.fa -b /path/to/your/breakpoint.tsv
   ```
 The version of reference genome is GRCh38 (HG38). The format of breakpoint.tsv is below and the first two coloumns is required:
 ```
