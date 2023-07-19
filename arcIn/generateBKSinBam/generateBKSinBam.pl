@@ -529,7 +529,7 @@ if($clip_both<0.3)
 	else
 	{
 		$clipL_chrom=0;
-		$right_map_mid=0;
+		$left_map_mid=0;
 	}
 	if($clipR_chrom>=2)
 	{
