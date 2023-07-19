@@ -50,7 +50,7 @@ Moreover, if you're interested in studying other archaic humans (or non-human sp
   cd arcIn/generateBKSinBam
   bash order.sh -i /path/to/your/modern_human.bam -r /path/to/your/reference.fa -b /path/to/your/breakpoint.tsv
   ```
-The version of reference genome is GRCh38 (HG38). The format of breakpoint.tsv is below and the first two coloumns is required:
+The version of reference genome is GRCh38 (HG38) and GRCh37 (HG19) is not supported. The format of breakpoint.tsv is below and the first two coloumns is required:
 ```
 chr1    948661  1/1     HG01529
 chr1    998785  0/1     HG01529
