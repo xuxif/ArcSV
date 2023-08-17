@@ -73,6 +73,5 @@ If the provided SV file is in VCF format, the output file will also be in VCF fo
 10      10493409        BK_right=10493420;EVIDENCE_right_ARCHAIC=5;EVIDENCE_right_MODERN=28
 10      10708535        BK_left=10708853;EVIDENCE_left_ARCHAIC=12;EVIDENCE_left_MODERN=52
 10      11484966        BK_right=11484970;EVIDENCE_right_ARCHAIC=5;EVIDENCE_right_MODERN=18
-10
 ```
 In the output files, the term evidence_direction refers to the side of the reads in both archaic and modern humans that are soft-clipped. 
