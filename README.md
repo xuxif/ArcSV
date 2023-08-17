@@ -66,7 +66,13 @@ You can find the detected SVs file in the current directory. The file ArcSV_inpu
 If the provided SV file is in VCF format, the output file will also be in VCF format (ArcSV_input_modern_input_arc.vcf). The format of the output file is detailed below:
 ```
 #chromosome position position evidence
-chr19   42529806        BK_right=42529824;EVIDENCE_right_ARCHAIC=1;EVIDENCE_right_MODERN=11
-chr3    177287011       BK_right=177287012;EVIDENCE_right_ARCHAIC=9;EVIDENCE_right_MODERN=5
+10      1057407 BK_right=1057436;EVIDENCE_right_ARCHAIC=3;EVIDENCE_right_MODERN=3
+10      1275635 BK_left=1275625;EVIDENCE_left_ARCHAIC=7;EVIDENCE_left_MODERN=38;BK_right=1275644;EVIDENCE_right_ARCHAIC=15;EVIDENCE_right_MODERN=47
+10      1292090 BK_left=1292091;EVIDENCE_left_ARCHAIC=6;EVIDENCE_left_MODERN=19;BK_right=1292108;EVIDENCE_right_ARCHAIC=8;EVIDENCE_right_MODERN=16
+10      10135356        BK_left=10135357;EVIDENCE_left_ARCHAIC=8;EVIDENCE_left_MODERN=9;BK_right=10135370;EVIDENCE_right_ARCHAIC=7;EVIDENCE_right_MODERN=14
+10      10493409        BK_right=10493420;EVIDENCE_right_ARCHAIC=5;EVIDENCE_right_MODERN=28
+10      10708535        BK_left=10708853;EVIDENCE_left_ARCHAIC=12;EVIDENCE_left_MODERN=52
+10      11484966        BK_right=11484970;EVIDENCE_right_ARCHAIC=5;EVIDENCE_right_MODERN=18
+10
 ```
 In the output files, the term evidence_direction refers to the side of the reads in both archaic and modern humans that are soft-clipped. 
