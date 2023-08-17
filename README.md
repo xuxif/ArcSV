@@ -45,7 +45,7 @@ chr1    9999    10001   3S63M   left    ACC     read_36
  ```
   ArcSV generate -i /path/to/test_data/input_modern.bam -r /path/to/referece_genome.fa -d /path/to/input_arc.bam.tsv -b /path/to/test_data/input.bed
   ```
-The version of reference genome is GRCh38 (HG38) and GRCh37 (HG19). The format of input.bed is below and the first two coloumns is required:
+Please note: The version of the reference genome used in your modern BAM, archaic human BAM files, and the value specified in '-r' should all be identical. The format of input.bed is below and the first two coloumns is required:
 ```
 10      100891948       100891998
 10      101011255       101011255
