@@ -35,6 +35,8 @@ If you encounter any issues during installation (ArcSV was not found in current 
  ```
 conda config --remove-key channels
  ```
+And then re-add the channels as described in Step 1 before trying the installation again.
+
 
 ### Generate feature in archaic human sequencing data
 Due to GitHub's file size limitations, we're unable to host the complete feature set. 
