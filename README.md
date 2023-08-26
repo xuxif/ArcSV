@@ -16,12 +16,22 @@ ArcSV is a unique bioinformatics tool specifically tailored for identifying stru
 6. xarg v4.5 (v4.8 will prompt parameter conflict）
 7. bcftools
 ### Recommended Environment Configuration Steps
-1. Insatll Anaconda in your server.
-2. Install ArcSV with bioconda channel 
+1. Insatll Anaconda in your server and set up bioconda.
+conda config --add channels defaults
+conda config --add channels bioconda
+conda config --add channels conda-forge
+
+2. To install ArcSV, simply run:
  
  ```
   conda install -c bioconda arcsv 
   ```
+3. Troubleshooting
+If you encounter any issues during installation (ArcSV was not found in current channel), it might be due to some repositories not being in sync with the official site. In such cases, we recommend using the default channel URL for Bioconda. Reset your channels using:
+ ```
+conda config --remove-key channels
+ ```
+
 ### Generate feature in archaic human sequencing data
 Due to GitHub's file size limitations, we're unable to host the complete feature set. 
 
