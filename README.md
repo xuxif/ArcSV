@@ -16,10 +16,13 @@ ArcSV is a unique bioinformatics tool specifically tailored for identifying stru
 6. xarg v4.5 (v4.8 will prompt parameter conflict）
 7. bcftools
 ### Recommended Environment Configuration Steps
+
 1. Insatll Anaconda in your server and set up bioconda.
+ ```
 conda config --add channels defaults
 conda config --add channels bioconda
 conda config --add channels conda-forge
+ ```
 
 2. To install ArcSV, simply run:
  
