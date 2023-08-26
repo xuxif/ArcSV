@@ -26,7 +26,8 @@ conda config --add channels conda-forge
  ```
   conda install -c bioconda arcsv 
   ```
-3. Troubleshooting
+3. Troubleshooting:
+   
 If you encounter any issues during installation (ArcSV was not found in current channel), it might be due to some repositories not being in sync with the official site. In such cases, we recommend using the default channel URL for Bioconda. Reset your channels using:
  ```
 conda config --remove-key channels
